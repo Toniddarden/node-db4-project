@@ -3,7 +3,9 @@ const recipeRouter = require('./recpies/recpie-router')
 const server = express();
 
 server.use(express.json());
-// server.use('/api/recipes')
+server.use('/recipes', recipeRouter);
+
+
 
 server.get('/', (req, res) => {
     res.send('hello from server')
